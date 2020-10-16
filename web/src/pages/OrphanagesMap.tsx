@@ -10,7 +10,7 @@ import api from '../services/api';
 import '../styles/pages/orphanages-map.css';
 
 interface Orphanage {
-    id: number;
+    id: string;
     latitude: number;
     longitude: number;
     name: string;
@@ -42,7 +42,7 @@ function OrphanagesMap() {
             </aside>
 
             <Map 
-                center={[-23.5429771,-46.757523]}
+                center={[-22.9347264,-47.1069916]}
                 zoom={15}
                 style={{ width: '100%', height:'100%' }}
             >
@@ -69,7 +69,7 @@ function OrphanagesMap() {
                 })}
             </Map>
 
-            <Link to="/orphanages/create" className="create-orphanage">
+            <Link to="/orphanage/create" className="create-orphanage">
               <FiPlus size={32} color="#FFF" />
             </Link>
         </div>
